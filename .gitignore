@@ -7,3 +7,4 @@ faq.db*
 faq_vectors2.db*
 *.db-shm
 *.db-wal
+models/

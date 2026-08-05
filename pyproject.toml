@@ -9,6 +9,7 @@ dependencies = [
     "gitsource>=0.0.5",
     "jupyter>=1.1.1",
     "minsearch>=0.1.0",
+    "onnxruntime>=1.28.0",
     "psycopg[binary]>=3.3.4",
     "python-dotenv>=1.2.2",
     "requests>=2.28.1",
