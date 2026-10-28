@@ -96,16 +96,15 @@ class RAGWithUsage(RAGBase):
             {"role": "user", "content": prompt}
         ]
 
-        response = self.llm_client.messages.create(
+        message = self.llm_client.messages.create(
             model=self.model,
             messages=input_messages,
             max_tokens=1000,
         )
+        self.last_usage = message.usage
+        self.usages.append(message.usage)
 
-        self.last_usage = response.usage
-        self.usages.append(response.usage)
-
-        return response.output_text
+        return message
 
     def total_cost(self):
         return calc_total_price(self.usages)

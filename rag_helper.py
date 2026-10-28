@@ -73,7 +73,7 @@ class RAGBase:
                 }
             ]
         )
-
+ 
         return message
 
     def rag(self, query):
